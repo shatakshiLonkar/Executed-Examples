@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script>
+            var colors = ['red', 'green','a','b'];
+            colors.forEach(function(color) {
+            document.writeln(color);
+            })
+            
+            var color=new Array("RED","BLUE","PURPLE");
+           color=color.concat(1,2,3);
+           
+           var list = color.join(' - ');
+           
+           document.writeln(list);
+
+           var a=new Array("A","B");
+           a.unshift("C","D");
+           document.write(a);
+
+           var b=new Array("1","2");
+           var c=b.shift();
+           document.writeln(c);
+
+           var myarray=new Array("1","2","3","4","5","8");
+           myarray.splice(1, 3, 'a', 'b', 'c', 'd');
+           myarray.reverse();
+           document.writeln(myarray);
+        </script>
+    </head>
+</html>

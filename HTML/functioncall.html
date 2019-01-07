@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <script>
+            function factorial(n)
+            {
+
+                var n = prompt("Please enter Number");
+                if (n != null) 
+                {
+                    document.getElementById("demo").innerHTML =
+        "Number :" + n;
+                }  
+    
+                if ((n===0) || (n===1))
+                    return 1;
+                else
+                    return(n*factorial(n-1));
+                    alert("Number:");
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="factorial()">Fact</button>
+    </body>
+</html>

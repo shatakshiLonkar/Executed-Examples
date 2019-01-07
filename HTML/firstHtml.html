@@ -1,0 +1,86 @@
+<html>
+
+<head>
+
+
+
+</head>
+
+<body>
+    <a href="https://example.com">Website</a>
+    <div>
+        Some textual contents in here(div)
+    </div>
+    <button onload="console.log('button is clicked')">press me</button>
+    <div>
+        <img id="myImage" />
+        <span id="loadingSpan">Loading...</span>
+    </div>
+    <script>
+
+
+        let varA = 10;
+        let varB = 20;
+
+
+        function outerFunction() {
+            function imageLoadComplete() {
+                // console.log("i am in onload function declared in script")
+                let loadingSpan = document.getElementById("loadingSpan");
+                loadingSpan.style.display = "none";
+            }
+
+            let testImage = document.getElementById("myImage");
+            testImage.onload = imageLoadComplete
+
+            testImage.src = "https://www.google.co.in/logos/doodles/2018/celebrating-400o-of-murillo-5901104519839744-l.png";
+
+
+            // console.log("image source is set. lets wait till its loaded. i am not waiting. control is here before image got loaded")
+
+        }
+
+
+        outerFunction();
+
+
+        let getMePromise = function(){
+            return new Promise(function (anything1, anything2) {
+                let someCondition = false;
+                if (someCondition) {
+                    resolve();
+                } else {
+                    reject();
+                }
+            })
+        }
+
+
+
+
+        console.log("this is before promise");
+        getMePromise().then(
+            function () {
+                console.log("this will get executed when myPromise is resolved.");
+            },
+            function () {
+                console.log("this will get executed when myPromise is rejected. in reject handler as part of then");
+                alert("Some thing happened here. please help us by sending your application state. your application state can be found ......")
+            }
+
+        );
+        console.log("this is after promise");
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
